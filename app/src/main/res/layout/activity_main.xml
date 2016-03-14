@@ -13,37 +13,46 @@
     <TextView
         android:id="@+id/timeState"
         android:gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="120dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
+        android:textSize="80sp"
         android:text="@string/time" />
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+    <ImageButton
+        android:layout_weight="1"
+        android:layout_width="@dimen/mar"
+        android:layout_height="@dimen/mar"
+        android:background="@mipmap/ic_start"
+        android:contentDescription="@string/start"
         android:onClick="startTimer"
         android:text="@string/start"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+    <ImageButton
+        android:layout_weight="1"
+        android:layout_width="@dimen/mar"
+        android:layout_height="@dimen/mar"
+        android:background="@mipmap/ic_stop"
+        android:contentDescription="@string/stop"
         android:onClick="stopTimer"
         android:text="@string/stop"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+    <ImageButton
+        android:layout_weight="1"
+        android:layout_width="@dimen/mar"
+        android:layout_height="@dimen/mar"
+        android:background="@mipmap/ic_reset"
+        android:contentDescription="@string/reset"
         android:onClick="resetTimer"
         android:text="@string/reset"/>
+
+    </LinearLayout>
 
 </LinearLayout>

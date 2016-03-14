@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 int hours = seconds/3600;
                 int minutes = (seconds%3600)/60;
                 int secs = seconds%60;
-                String time = String.format("%d:%02d:%02d",
+                String time = String.format("%02d:%02d:%02d",
                         hours, minutes, secs);
                 timeView.setText(time);
                 if (isRunning) {
@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Handle configuration changes by saving the Activity state variables
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("seconds", seconds);
